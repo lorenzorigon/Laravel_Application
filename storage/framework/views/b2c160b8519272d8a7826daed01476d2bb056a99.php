@@ -44,7 +44,14 @@
                 </div>
             </navbar>
         </header>
-        <?php echo $__env->yieldContent('content'); ?>
+        <div class="container-flui">
+            <div class="row">
+                <?php if(session('msg')): ?>
+                    <p class="msg"><?php echo e(session('msg')); ?></p>
+                <?php endif; ?>
+                <?php echo $__env->yieldContent('content'); ?>
+            </div>
+        </div>
         <footer>
             <p>HDC Events &copy; 2020</p>
         </footer>
